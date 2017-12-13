@@ -143,3 +143,77 @@ func F2C(f Fahrenheit) Celsius {
 Go语言中对于每个类型T，都有一个对应的类型转换操作T(x)，将值x转换成类型T。
 
 ### 包和文件
+
+每一个包给它的声明提供了独立的命名空间。package声明前面紧挨着文档注释对整个包进行描述。以温度值转换为例，我们来编写tempcov包。
+
+```shell
+# 文件目录
+tempconv
+  |-tempconv.go
+  |-conv.go
+```
+
+```go
+// Name: tempconv.go
+// 将类型、常量、方法的声明均放在tempcov.go文件中
+// tempcov包负责摄氏温度和华氏温度间的转换
+package tempconv
+
+import "fmt"
+
+// 声明两个类型，Celsius和Fahrenheit
+type Celsius float64
+type Fahrenheit float64
+
+// 声明三个包级别的常量
+const (
+  AbsoluteZeroC Celsius = -273.15
+  FreezingC     Celsius = 0
+  BoilingC      Celsius = 100
+)
+
+// 声明String()方法
+func (c Celsius) String() string { return fmt.Sprintf("%g˚C", c)}
+func (f Fahrenheit) String() string { return fmt.Sprintf("%g˚F", f)}
+```
+
+```go
+// Name: conv.go
+package tempconv
+
+func C2F(c Celsius) Fahrenheit {
+  return Fahrenheit(c * 9 / 5 +32)
+}
+func F2C(f Fahrenheit) Celsius {
+  return Celsius((f - 32) * 5 / 9)
+}
+```
+
+然后，测试包tempconv的文件可以这样写，
+
+```go
+// Name: test.go
+// 测试包tempconv
+package main
+
+import (
+  "fmt"
+  "tempconv"
+)
+
+func main() {
+  fmt.Println("The AbsoluteZeroC is %v", tempconv.AbsoluteZeroC)
+  c := tempconv.F2C(212.0)
+  fmt.Println(c.String())
+}
+```
+
+包的初始化从初始化包级别的变量开始。对于包级别的每一个变量，生命周期从其值被初始化开始。任何文件都可以包含任意数量的声明，如init函数：
+
+```go
+func init() { /* ... */ }
+```
+
+这个init函数不能被调用和被引用，在程序启动的时候，init函数按照它们生命的顺序自动执行。
+
+例如，包popcount中的[init()](src/popcount/popcount)函数。

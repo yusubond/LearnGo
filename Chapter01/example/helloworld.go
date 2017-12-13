@@ -3,10 +3,7 @@
 // Date: Dec 10, 2017
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
 func main() {
   fmt.Println("Hello, World")
