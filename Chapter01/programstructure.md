@@ -216,4 +216,4 @@ func init() { /* ... */ }
 
 这个init函数不能被调用和被引用，在程序启动的时候，init函数按照它们生命的顺序自动执行。
 
-例如，包popcount中的[init()](src/popcount/popcount)函数。
+例如，包popcount中的[init()](src/popcount/popcount.go)函数。
