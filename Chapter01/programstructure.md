@@ -10,6 +10,17 @@
 
 一切语言都是从基本组件构建而来，变量存储值，简单表达式通过运算合并成大的语言块；基本类型通过数组和结构体进行聚合；表达式通过if、for等控制语言来决定执行顺序；语言被组织成函数用于隔离和复用；函数被组织成源文件和包。
 
+Go语言中内置的预声明的常量、类型和函数包括：
+
+**常量**：true false iota nil
+
+**类型**：int int8 int16 int32 int64
+         uint uint8 uint16 uint32 uint64 uintprt
+         float32 float64 complex64 complex128
+         bool byte rune string error
+
+**函数**：make len cap new append copy close delete complex real imag panic recover
+
 ### helloworld
 
 从Hello World程序开始，简单介绍go程序的结构组成。下面，go语言的hello world程序源码。
