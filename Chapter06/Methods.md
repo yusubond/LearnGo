@@ -92,3 +92,24 @@ qptr.Distance(p)
 ```
 
 栗子：[mypoint](example/mypoint.go)
+
+### 结构体内嵌
+
+下面定义一种ColorPoint类型
+
+```go
+import "image/color"
+
+type Point struct {
+  X, Y float64
+}
+
+type ColorPoint struct {
+  Point
+  color.RGBA
+}
+```
+
+那么这个ColorPoint类型可以同时拥有Point所有的方法，也拥有RGBA所有的方法，以及任何直接在ColorPoint类型中声明的方法。
+
+栗子：[mycolorpoint](example/mycolorpoint.go)
