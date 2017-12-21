@@ -4,6 +4,8 @@
 
   * [普通变量作为接受者](#普通变量作为接受者)
   * [指针变量作为接受者](#指针变量作为接受者)
+  * [结构体内嵌](#结构体内嵌)
+  * [方法变量与表达式](#方法变量与表达式)
 
 ### 普通变量作为接受者
 
@@ -113,3 +115,36 @@ type ColorPoint struct {
 那么这个ColorPoint类型可以同时拥有Point所有的方法，也拥有RGBA所有的方法，以及任何直接在ColorPoint类型中声明的方法。
 
 栗子：[mycolorpoint](example/mycolorpoint.go)
+
+### 方法变量与表达式
+
+通常，我们调用方法时需要指定接受者，比如p.Distance()。但是，Go语言也允许将方法赋值给一个 **方法变量**，它是一个 **函数**，把方法绑定到接受者上。因此，使用方法变量的时候只需要提供实参即可，而不需要提供接受者就可以。
+
+```go
+p := Point{1, 2}
+q := Point{4, 6}
+// 将方法Point.Distance以方法变量的方式赋值到一个方法变量distancefromp
+// 这个时候，distancefromp就是一个函数，调用时只提供实参即可
+distancefromp := p.Distance
+// 调用distancefromp
+fmt.Println(distancefromp(q))
+```
+
+与方法变量类似的是方法表达式，两者的区别就是：方法表达式写成T.f或(*T.f)，T是类型，它是一种 **函数变量**，把原来方法的接受者作为函数的第一个形参，因此可以像调用其他普通函数一样调用。
+
+```go
+p := Point{1, 2}
+q := Point{4, 6}
+// 将方法Point.Distance以方法表达式的方式赋值到一个变量distance
+// 这个时候，distance就是一个函数变量，调用时需要提供包含接受者的实参
+distance := Point.Distance
+// 调用distance
+fmt.Println(distance(q, p))
+fmt.Printf("%T\n", distance)  // func(Point, Point) float64
+scale := (*Point).ScaleBy
+scale(&p, 3)
+fmt.Println(p)
+fmt.Printf("%T\n", scale)     // func(*Point, float64)
+```
+
+栗子：[pointvar](example/pointvar.go)
