@@ -147,4 +147,10 @@ fmt.Println(p)
 fmt.Printf("%T\n", scale)     // func(*Point, float64)
 ```
 
-栗子：[pointvar](example/pointvar.go)
+栗子1：[pointvar](example/pointvar.go)
+
+栗子2：[pointadd](example/pointadd.go)
+
+习题：用位向量实现集合的运算
+
+参考: [inset](exmaple/intset.go)
