@@ -6,4 +6,5 @@ Contents
   * [基本数据类型](Chapter02/basictype.md)
   * [聚合数据类型](Chapter04/aggregate.md)
   * [方法](Chapter06/Methods.md)
+    * 练习题[位向量](Chapter06/intset.md)
   * [Go语言编程习惯](goodstyle.md)
