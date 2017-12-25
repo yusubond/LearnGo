@@ -2,7 +2,7 @@
 
 如果说goroutine是Go程序并发的执行体，那么通道就是它们之间的连接。**通道是可以让一个goroutine发送特定值到另一个goroutine的通信机制**。
 
-每一个通道是一个具体类型的导管，就做通道的 *元素类型*。一个有int类型元素的通道，写作`chan int`，使用内置函数<font color="red">`make`</font>可以创建一个通道。
+每一个通道是一个具体类型的导管，就做通道的 *元素类型*。一个有int类型元素的通道，写作`chan int`，使用内置函数<font color="red">make</font>可以创建一个通道。
 
 ```go
 ch := make(chan int)      // ch的类型为"chan int"
