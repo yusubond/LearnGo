@@ -28,7 +28,13 @@ func (s *IntSet) Add(x int) {
 // AddAll方法，允许向集合中添加一串整型值
 func (s *IntSet) AddAll(values ...int) {
   for _, val := range values {
-    s.Add(val)
+    // 第一种：s.Add(val)
+    // 第二种
+    word, bit := val/64, uint64(val%64)
+    for word >= len(s.words) {
+      s.words = append(s.words, 0)
+    }
+    s.words[word] |= 1 << bit
   }
 }
 
