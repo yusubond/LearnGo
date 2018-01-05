@@ -13,5 +13,5 @@ Contents
   * [goroutine](Chapter08/goroutine.md)
   * [通道](Chapter08/channel.md)
     * [并行循环](Chapter08/thumbnail.md)
-    * [并发的Web爬虫](Chapter08/concurrenceweb.go)
+    * [并发的Web爬虫](Chapter08/concurrenceweb.md)
   * [Go语言编程习惯](goodstyle.md)
