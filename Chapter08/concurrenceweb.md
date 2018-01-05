@@ -139,6 +139,8 @@ func main() {
 }
 ```
 
+爬取goroutine使用同一个通道unseenlinks进行接收。主goroutine负责从任务列表接收到的条目中去重，然后发送每一个没有被爬取的条目到unseenlinks通道，并被爬取goroutine接收。
+
 第三版的程序逻辑结构图
 
 ![程序逻辑](http://on64c9tla.bkt.clouddn.com/Go/images.jpg)
