@@ -14,4 +14,5 @@ Contents
   * [通道](Chapter08/channel.md)
     * [并行循环](Chapter08/thumbnail.md)
     * [并发的Web爬虫](Chapter08/concurrenceweb.md)
+    * [多路复用select](Chapter08/select.md)
   * [Go语言编程习惯](goodstyle.md)
