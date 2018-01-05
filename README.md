@@ -15,4 +15,6 @@ Contents
     * [并行循环](Chapter08/thumbnail.md)
     * [并发的Web爬虫](Chapter08/concurrenceweb.md)
     * [多路复用select](Chapter08/select.md)
+    * [并发目录遍历](Chapter08/du.md)
+    * [聊天服务器](Chapter08/chat.md)
   * [Go语言编程习惯](goodstyle.md)
