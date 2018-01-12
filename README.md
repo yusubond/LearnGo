@@ -17,4 +17,6 @@ Contents
     * [多路复用select](Chapter08/select.md)
     * [并发目录遍历](Chapter08/du.md)
     * [聊天服务器](Chapter08/chat.md)
+  * [共享变量](Chapter09/sharevar.md)
+  * [测试](Chapter11/test.md)
   * [Go语言编程习惯](goodstyle.md)
