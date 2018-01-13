@@ -6,7 +6,11 @@ package person
 
 import "testing"
 
-tests := []Person{{"Tom", 12}, {"Jack", 14}, {"John", 23}}
+tests := [...]Person{
+  Person{"Tom", 12},
+  Person{"Jack", 14},
+  Person{"John", 23}
+}
 
 func TestOlder(t *testing.T) {
   for i := 1; i < 3; i++ {
