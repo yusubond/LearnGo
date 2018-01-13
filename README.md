@@ -3,8 +3,10 @@
 Contents
 
   * [基本程序结构](Chapter01/programstructure.md)
-  * [基本数据类型](Chapter02/basictype.md)
-  * [聚合数据类型](Chapter04/aggregate.md)
+  * [基本数据类型](Chapter02/basictype.md) 主要包括int、float、complex、bool和string
+  * [聚合数据类型](Chapter04/compositetype.md) 主要包括数组、slice、map和结构体
+  * [基本控制流](More/basiccontrolflow.md)
+  * [函数](More/function.md)
   * [方法](Chapter06/Methods.md)
     * 练习题:[位向量](Chapter06/intset.md)
   * [接口](Chapter07/interface.md)
