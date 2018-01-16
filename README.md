@@ -7,6 +7,7 @@ Contents
   * [聚合数据类型](Chapter04/compositetype.md) 主要包括数组、slice、map和结构体
   * [基本控制流](More/basiccontrolflow.md)
   * [函数](More/function.md)
+  * [函数进阶](More/function2.md)
   * [方法](Chapter06/Methods.md)
     * 练习题:[位向量](Chapter06/intset.md)
   * [接口](Chapter07/interface.md)
