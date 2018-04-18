@@ -222,11 +222,11 @@ type Wheel struct {
 
 ```go
 type Circle struct {
-  Point
+  Point     // 匿名成员
   Radius int
 }
 type Wheel struct {
-  Circle
+  Circle    // 匿名成员
   Spokes int
 }
 ```
