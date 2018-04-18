@@ -44,8 +44,8 @@ close(ch)
 
 通道可以用来连接goroutine，这样一个的输出是另一个的输入，这个叫做管道(pipeline)。
 
-栗子：[pipeline1.go](example/pipeline1.go)  
-栗子：[pipeline2.go](example/pipeline2.go)  
+栗子：[pipeline1.go](example/pipeline/pipeline1.go)  
+栗子：[pipeline2.go](example/pipeline/pipeline2.go)  
 
 注意：结束的时候，关闭每一个通道不是必须的。**只有在通知接收方goroutine所有的数据都发送完毕的时候才需要关闭通道**。例如
 
