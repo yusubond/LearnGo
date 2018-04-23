@@ -1,0 +1,7 @@
+# ignore the package
+/Package/bin/*
+/Package/pkg/*
+/Package/src/github.com/*
+/Package/src/golang.org/*
+
+# root path
