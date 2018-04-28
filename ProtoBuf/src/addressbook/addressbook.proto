@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package addressbook;
+
+message Person {
+    string name = 1;
+    int32 id = 2;
+
+    // 枚举类型的第一个字段必须为0
+    enum PhoneType {
+      MOBILE = 0;
+      HOME = 1;
+      WORK = 2;
+    }
+
+    message Phone {
+      string number = 1;
+      PhoneType type = 2;
+    }
+
+    repeated Phone phones = 3;
+}
+
+message AddressBook {
+    repeated Person persons = 1;
+}
