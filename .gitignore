@@ -4,5 +4,6 @@
 /Package/src/github.com/*
 /Package/src/golang.org/*
 /Package/src/subond/tempfile465527485
+/ProtoBuf/pkg/*
 
 # root path
