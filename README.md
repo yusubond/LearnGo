@@ -25,7 +25,7 @@ Contents
   * [常见的并发模式](Chapter08/concurrence.md)
   * [共享变量](Chapter09/sharevar.md)
   * [测试](Chapter11/test.md)
-  * [Go语言编程习惯](goodstyle.md)
+  * [Go编程与技巧](goodstyle.md)
   * [网络编程](NetworkGo/networkgo.md)
 
 ## 高级教程
