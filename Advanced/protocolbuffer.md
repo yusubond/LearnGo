@@ -96,7 +96,12 @@ proto中`message Phone{}`作为`message Person{}`的子成员,在golang中则为
 
 其次，对应每一种`message`转化为golang源码后，分别生成一些常用的方法，例如`Reset()`, `String()`,`GetName()`等方法。
 
-## 示例文件
+### 示例文件
 
   * [addressbook.proto](ProtoBuf/src/addressbook/addressbook.proto)    
   * [addressbook.pb.go](ProtoBuf/src/addressbook/addressbook.pb.go)    
+
+### 参考文件
+
+  * [https://developers.google.com/protocol-buffers/docs/gotutorial](https://developers.google.com/protocol-buffers/docs/gotutorial)
+  * [https://developers.google.com/protocol-buffers/docs/proto3](https://developers.google.com/protocol-buffers/docs/proto3)
