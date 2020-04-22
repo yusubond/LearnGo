@@ -34,6 +34,10 @@ Contents
 
   * [ProtoBuf][24]
 
+## Go深度理解
+
+本文以为所涉及的源码分析基于go v1.14。
+
 [1]:	Chapter01/programstructure.md
 [2]:	Chapter02/basictype.md
 [3]:	Chapter04/compositetype.md
